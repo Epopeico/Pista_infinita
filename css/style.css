@@ -5,30 +5,39 @@
 }
 
 .game-board {
-    width: 80%;
+    width: 100%;
     height: 500px;
-    border: 1px solid black;
+    border-bottom: 15px solid rgb(35, 160, 35);
     margin: 0 auto;
     position: relative; /* como estamos usando posicao absoluta nas nossas imagens dentro da div precisamos definir ela como relative*/
     overflow: hidden; /* tudo que esta fora do da div fica escondido */
+    background:  linear-gradient(#87CEEB, #E0F6FF);
 }
 
 .pipe {
     position : absolute;
     bottom: 0;
-    width: 60px;
-    animation: pipe-animation 2s infinite linear; 
+    width: 40px;
+    animation: pipe-animation 1.5s infinite linear; 
  }
 
  .jumpman {
     position: absolute;
     bottom: 0;
-    width: 150px;
+    width: 100px;
+    bottom: 0px;
 }
 
 .jump {
      animation: jump 500ms  ease-out; /* ease out da uma efeito suave a gif sai rapido e volta suave  */ 
     
+ }
+
+ .cloud {
+    position: absolute;
+    width: 550px;
+    animation: cloud-animation 20s infinite linear;
+
  }
 
  @keyframes pipe-animation {
@@ -47,18 +56,33 @@
     bottom: 0;
    }
    40% {
-    bottom: 100px;
+    bottom: 160px;
    }
    50%{
-    bottom: 100px;
+    bottom: 160px;
    }
 
    60%{
-    bottom: 100px;
+    bottom: 160px;
    }
+
+   65%{
+    bottom: 160px;
+   }
+
    100% {
     bottom: 0;
    }
+ }
+
+ @keyFrames cloud-animation {
+    from {
+        right: -550px;
+    
+    }
+    to {
+        right: 100%;
+    }
  }
 
  /* jump -> A gente criou um efeito de desacelerar no pulo dele usando a mesmo tamanho em varios frames diferentes ai ele parte do ponto zero chao fica no ar durante 3 transicoes e depois volta ao chao causando um efeito agradavel de queda mais suave*/
