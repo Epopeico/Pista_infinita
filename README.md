@@ -12,7 +12,7 @@ Durante o desenvolvimento, acompanhei o vídeo passo a passo e reescrevi o códi
 A ideia é usar este projeto como base para aprender e futuramente adicionar:
 - Pontuação
 - Obstáculos extras
-- 
+
 ## 🎓 O que aprendi
 - Manipulação de DOM com JavaScript
 - Detecção de colisão simples
